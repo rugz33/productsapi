@@ -3,78 +3,49 @@ HOST: http://productsapi14.apiblueprint.org/
 
 # Products API
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+Products API is a simple API allowing consumers to view product.
 
-## Questions Collection [/questions]
+## Products Collection [/products]
 
-### List All Questions [GET]
+### List All Products [GET]
 
 + Response 200 (application/json)
 
         [
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
+                "count": 5,
+                "data": [
                     {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
+                        "product_id": "PR-0001"
+                        "name": "Spa by Marga tilaar",
+                        "price": "Rp 100.000,00
+                        "description": "Details details details details"
+                    },
+                    {
+                        "product_id": "PR-0002"
+                        "name": "Spa by Wonder Spa",
+                        "price": "Rp 150.000,00
+                        "description": "Details details details details"
+                    },
+                    {
+                        "product_id": "PR-0003"
+                        "name": "Spa by Best Spa",
+                        "price": "Rp 200.000,00
+                        "description": "Details details details details"
+                    },
+                    {
+                        "product_id": "PR-0004"
+                        "name": "Spa by The New Spa",
+                        "price": "Rp 250.000,00
+                        "description": "Details details details details"
+                    },
+                    {
+                        "product_id": "PR-0005"
+                        "name": "Spa by All Spa",
+                        "price": "Rp 300.000,00
+                        "description": "Details details details details"
+                    },
+                    
                 ]
             }
-        ]
-
-### Create a New Question [POST]
-
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
-
-+ Request (application/json)
-
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
-
-+ Response 201 (application/json)
-
-    + Headers
-
-            Location: /questions/2
-
-    + Body
-
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
-            }
+        ]it
